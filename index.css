@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+.main-container {
+  width: 375px;
+}
+.header {
+  position: relative;
+}
+.header-desktop {
+  display: none;
+}
+.back-card-container {
+  width: 286px;
+  position: absolute;
+  top: 32px;
+  right: 16px;
+}
+.card-back-side {
+  width: 286px;
+  position: relative;
+}
+.back-para {
+  position: absolute;
+  padding: 8.9px 10.8px 9.8px 180.2px;
+  border: none;
+  font-family: "Space Grotesk", sans-serif;
+  width: 231px;
+  height: 29.7px;
+  border-radius: 4px;
+  background-color: #adb5be;
+  right: 26px;
+  font-size: 9px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.29px;
+  text-align: right;
+  color: #fff !important;
+  bottom: 62.5px;
+}
+.front-card-container {
+  font-family: "Space Grotesk", sans-serif;
+  position: absolute;
+  width: 285px;
+  left: 17px;
+  bottom: -42.6px;
+}
+.card-front-side {
+  display: block;
+  width: 285px;
+  position: relative;
+}
+.oval {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 17.6px;
+  left: 19px;
+}
+.second-oval {
+  border: solid 1px #fff;
+  width: 13.6px;
+  height: 13.5px;
+  position: absolute;
+  top: 26px;
+  left: 60px;
+  border-radius: 50%;
+}
+.card-id-para {
+  width: 239px;
+  position: absolute;
+  outline: none;
+  border: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: left;
+  left: 19px;
+  bottom: 48.6px;
+  height: 23px;
+}
+.card-owner-name {
+  position: absolute;
+  font-size: 9px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.29px;
+  text-align: left;
+  color: #fff;
+  bottom: 20.6px;
+  left: 19px;
+}
+.validity-period {
+  position: absolute;
+
+  font-size: 9px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.29px;
+  text-align: right;
+  color: #fff;
+  right: 20.9px;
+  bottom: 20.6px;
+}
