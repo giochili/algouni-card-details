@@ -12,6 +12,8 @@ body {
 }
 .main-container {
   width: 375px;
+  display: flex;
+  flex-direction: column;
 }
 .header {
   position: relative;
@@ -123,4 +125,155 @@ body {
   color: #fff;
   right: 20.9px;
   bottom: 20.6px;
+}
+.info-section {
+  display: flex;
+  flex-direction: column;
+  padding: 91px 24px 45px;
+  align-items: flex-start;
+  font-family: "Space Grotesk", sans-serif;
+}
+.info-input {
+  width: 327px;
+  padding: 11px 137px 11px 16px;
+  font-family: "Space Grotesk", sans-serif;
+  border-radius: 8px;
+  border: solid 1px #dfdee0;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #21092f;
+  margin-bottom: 20px;
+}
+.info {
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #21092f;
+  margin-bottom: 9px;
+}
+.exp-date {
+  display: flex;
+  gap: 23px;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #21092f;
+}
+input::placeholder {
+  opacity: 0.25;
+}
+.MM,
+.YY {
+  border-radius: 8px;
+  border: solid 1px #dfdee0;
+  width: 72px;
+  padding: 11px 24px 11px 16px;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #21092f;
+}
+.CVC {
+  margin-left: 3px;
+  border-radius: 8px;
+  border: solid 1px #dfdee0;
+  padding: 11px 82px 11px 16px;
+  width: 164px;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #21092f;
+}
+.date-inputs {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  margin-bottom: 20px;
+}
+.confirm-btn {
+  padding: 15px 130px 15px 129px;
+  border-radius: 8px;
+  background-color: #21092f;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+.complite-section {
+  padding: 91px 24px 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+.complite {
+  margin-bottom: 35px;
+}
+.ty-header {
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 3.42px;
+  text-align: center;
+  color: #21092f;
+  margin-bottom: 16px;
+}
+.added-para {
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #8f8694;
+  margin-bottom: 48px;
+}
+.continue-btn {
+  width: 100%;
+  border: none;
+  padding: 15px 124px;
+  border-radius: 8px;
+  background-color: #21092f;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  letter-spacing: 1.5px;
 }
