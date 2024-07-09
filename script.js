@@ -2,7 +2,14 @@ const personName = document.querySelector(".cardholder-name");
 const displayName = document.querySelector(".card-owner-name");
 const personId = document.querySelector(".card-number-input");
 const displayId = document.querySelector(".card-id-para");
-
+//////exp date selecting
+const month = document.querySelector(".MM");
+const displayMonth = document.querySelector(".month");
+const year = document.querySelector(".YY");
+const displayYear = document.querySelector(".year");
+const cvc = document.querySelector(".CVC");
+const displayCVC = document.querySelector(".back-para");
+const confirmBtn = document.querySelector(".confirm-btn");
 ///thats for id
 function checkerOfId(inputElement) {
   const value = inputElement.value.replace(/\s/g, ""); // Remove spaces
@@ -38,3 +45,63 @@ personName.addEventListener("input", (event) => {
   cardHolderChecker(personName);
 });
 ////till there
+////there is month event lisener
+function validation(inputElement) {
+  const numericRegex = /^[0-9]*$/; // Regular expression to match only numeric characters
+  let warningMessage = "";
+
+  // Remove any existing warning message
+  const existingWarning = inputElement.nextElementSibling;
+  if (existingWarning && existingWarning.classList.contains("warning")) {
+    existingWarning.remove();
+  }
+
+  if (!inputElement.value) {
+    inputElement.style.border = "1.5px solid red";
+    warningMessage = "Can't be blank";
+  } else if (!numericRegex.test(inputElement.value)) {
+    inputElement.style.border = "1.5px solid red";
+    warningMessage = "Only numeric";
+  } else {
+    inputElement.style.border = "1.5px solid green";
+  }
+
+  if (warningMessage) {
+    const warningElement = document.createElement("div");
+    warningElement.className = "warning";
+    warningElement.style.cssText = `
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ff5050;
+      margin-top:8px;
+    `;
+    warningElement.textContent = warningMessage;
+    inputElement.parentNode.insertBefore(
+      warningElement,
+      inputElement.nextSibling
+    );
+  }
+}
+month.addEventListener("input", (event) => {
+  displayMonth.textContent = event.target.value || "00";
+  validation(month);
+});
+
+//////წლის შემოწმება
+year.addEventListener("input", (event) => {
+  displayYear.textContent = event.target.value || "00";
+  validation(year);
+});
+
+cvc.addEventListener("input", (event) => {
+  displayCVC.textContent = event.target.value || "000";
+  validation(cvc);
+});
+confirmBtn.addEventListener("click", () => {
+  
+})

@@ -46,27 +46,55 @@
           <p class="card-id-para">0000 0000 0000 0000</p>
           <p class="card-owner-name">JANE APPLESEED</p>
           <p class="validity-period">
-            <span class="month">00</span  class="year">/<span>00</span>
+            <span class="month">00</span>/<span class="year">00</span>
           </p>
         </div>
       </header>
       <section class="info-section">
         <h2 class="header-name info">CARDHOLDER NAME</h2>
-        <input type="text" class="cardholder-name info-input" maxlength="20" placeholder="e.g. Jane Appleseed">
+        <input
+          type="text"
+          class="cardholder-name info-input"
+          maxlength="20"
+          placeholder="e.g. Jane Appleseed"
+        />
         <h2 class="card-number info">CARD NUMBER</h2>
-        <input type="text" class="card-number-input info-input" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
-        <div class="exp-date"><h2 class="info">Exp. Date (MM/YY)</h2> <h2 class="info">CVC</h2></div>
+        <input
+          type="text"
+          class="card-number-input info-input"
+          maxlength="19"
+          placeholder="e.g. 1234 5678 9123 0000"
+        />
+        <div class="exp-date">
+          <h2 class="info">Exp. Date (MM/YY)</h2>
+          <h2 class="info">CVC</h2>
+        </div>
         <div class="date-inputs">
-          <input type="text" class="MM date" placeholder="MM">
-          <input type="text" class="YY date" placeholder="YY">
-          <input type="text" class="CVC date" placeholder="e.g. 123">
+          <div>
+            <input type="text" class="MM date" maxlength="2" placeholder="MM" />
+          </div>
+          <div>
+            <input type="text" class="YY date" placeholder="YY" maxlength="2" />
+          </div>
+          <div>
+            <input
+              type="text"
+              class="CVC date"
+              maxlength="3"
+              placeholder="e.g. 123"
+            />
+          </div>
         </div>
         <button class="confirm-btn">Confirm</button>
       </section>
       <section class="complite-section">
-        <img src="./images/icon-complete.svg" alt="icon-complete" class="complite">
+        <img
+          src="./images/icon-complete.svg"
+          alt="icon-complete"
+          class="complite"
+        />
         <h2 class="ty-header">THANK YOU!</h2>
-        <p class="added-para">We’ve added your card details</p> 
+        <p class="added-para">We’ve added your card details</p>
         <button class="continue-btn">Continue</button>
       </section>
     </main>
