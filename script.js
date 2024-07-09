@@ -10,6 +10,9 @@ const displayYear = document.querySelector(".year");
 const cvc = document.querySelector(".CVC");
 const displayCVC = document.querySelector(".back-para");
 const confirmBtn = document.querySelector(".confirm-btn");
+const infoContainer = document.querySelector(".info-section");
+const confirmContainer = document.querySelector(".complite-section");
+const continueBtn = document.querySelector(".continue-btn");
 ///thats for id
 function checkerOfId(inputElement) {
   const value = inputElement.value.replace(/\s/g, ""); // Remove spaces
@@ -102,6 +105,45 @@ cvc.addEventListener("input", (event) => {
   displayCVC.textContent = event.target.value || "000";
   validation(cvc);
 });
+
 confirmBtn.addEventListener("click", () => {
-  
-})
+  // Perform all synchronous validations
+  let personIdValid = checkerOfId(personId);
+  let monthValid = validation(month);
+  let yearValid = validation(year);
+  let cvcValid = validation(cvc);
+  let personNameValid = cardHolderChecker(personName);
+
+  // Check if all validations pass
+  if (
+    personId.value.length === 19 &&
+    month.value &&
+    year.value &&
+    cvc.value &&
+    personName.value
+  ) {
+    infoContainer.style.display = "none"; // Hide infoContainer
+    confirmContainer.style.display = "flex"; // Show confirmContainer
+  } else {
+    alert(`გთხოვთ შეავსოთ ყველა სავალდებულო ველი ! `);
+  }
+});
+continueBtn.addEventListener("click", () => {
+  infoContainer.style.display = "flex"; // Hide infoContainer
+  confirmContainer.style.display = "none"; // Show confirmContainer
+  personId.value = "";
+  personId.style.border = "none";
+  displayId.textContent = "0000 0000 0000 0000";
+  month.value = "";
+  month.style.border = "none";
+  displayMonth.textContent = "00";
+  cvc.value = "";
+  cvc.style.border = "none";
+  displayCVC.textContent = "000";
+  year.value = "";
+  year.style.border = "none";
+  displayYear.textContent = "00";
+  personName.value = "";
+  personName.style.border = "none";
+  personName.textContent = "JANE APPLESEED";
+});

@@ -6,6 +6,7 @@
 }
 body {
   min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   font-family: "Space Grotesk", sans-serif;
@@ -14,6 +15,7 @@ input {
   outline: none;
 }
 .main-container {
+  height: 100%;
   width: 375px;
   display: flex;
   flex-direction: column;
@@ -231,6 +233,9 @@ input::placeholder {
   color: #fff;
   letter-spacing: 1.5px;
 }
+.confirm-btn:hover {
+  cursor: pointer;
+}
 .complite-section {
   padding: 91px 24px 82px;
   display: flex;
@@ -279,4 +284,101 @@ input::placeholder {
   text-align: left;
   color: #fff;
   letter-spacing: 1.5px;
+}
+.continue-btn:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 1440px) {
+  .main-container {
+    width: 1440px;
+    flex-direction: row;
+  }
+  .header-mobile {
+    display: none;
+  }
+  .header-desktop {
+    display: block;
+  }
+  .front-card-container {
+    top: 186px;
+    height: 245px;
+    left: 164px;
+  }
+  .card-front-side {
+    width: 447px;
+  }
+  .oval {
+    width: 47px;
+    height: 47px;
+    top: 28px;
+    left: 32px;
+  }
+  .second-oval {
+    width: 21.1px;
+    height: 21.1px;
+    top: 40.9px;
+    left: 94.9px;
+  }
+  .card-id-para {
+    top: 139px;
+    left: 32px;
+    font-size: 28px;
+    width: 372px;
+    height: 36px;
+  }
+  .card-owner-name {
+    top: 200.5px;
+    left: 32px;
+    font-size: 14px;
+    width: 25ch;
+    height: 18px;
+    letter-spacing: 2px;
+  }
+  .validity-period {
+    top: 200.5px;
+    left: 365px;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .back-card-container {
+    width: 447px;
+    top: 469px;
+    right: -222px;
+  }
+  .card-back-side {
+    width: 447px;
+  }
+  .back-para {
+    top: 101px;
+    left: 45px;
+    width: 361px;
+    height: 38px;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 2px;
+  }
+  .info-section {
+    width: 100%;
+    padding: 275px 227px 273px 349px;
+  }
+  .header-name {
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 2px;
+  }
+  .info-input {
+    width: 381px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 26px;
+  }
+  .exp-date {
+    gap: 50px;
+  }
 }
