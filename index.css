@@ -38,11 +38,11 @@ input {
 }
 .back-para {
   position: absolute;
-  padding: 8.9px 10.8px 9.8px 180.2px;
+  padding: 10.9px 10.8px 9.8px 180.2px;
   border: none;
   font-family: "Space Grotesk", sans-serif;
   width: 231px;
-  height: 29.7px;
+  height: 34.5px;
   border-radius: 4px;
   background-color: #adb5be;
   right: 26px;
@@ -289,6 +289,9 @@ input::placeholder {
   cursor: pointer;
 }
 @media only screen and (min-width: 1440px) {
+  body {
+    overflow-x: hidden;
+  }
   .main-container {
     width: 1440px;
     flex-direction: row;
@@ -298,6 +301,7 @@ input::placeholder {
   }
   .header-desktop {
     display: block;
+    height: 100%;
   }
   .front-card-container {
     top: 186px;
@@ -360,7 +364,8 @@ input::placeholder {
     line-height: normal;
     letter-spacing: 2px;
   }
-  .info-section {
+  .info-section,
+  .complite-section {
     width: 100%;
     padding: 275px 227px 273px 349px;
   }
@@ -380,5 +385,25 @@ input::placeholder {
   }
   .exp-date {
     gap: 50px;
+  }
+  .date-inputs {
+    display: grid;
+    grid-template-columns: 80px 80px 191px;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .date {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 11px 21px 11px 16px;
+    width: 100%;
+  }
+  .CVC {
+    margin-left: 10px;
+  }
+  .confirm-btn,
+  .continue-btn {
+    font-size: 18px;
+    text-align: center;
   }
 }
